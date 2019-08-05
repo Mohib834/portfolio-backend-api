@@ -10,7 +10,7 @@ router.post('/contact/new', async (req, res) => {
         const user = new User(req.body);
         await user.save();
 
-        // sendMail(email, message);
+        sendMail(email, message);
         res.send({ message: 'Message Sent !' });
 
     } catch (e) {
